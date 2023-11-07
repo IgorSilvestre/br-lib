@@ -1,11 +1,34 @@
-function isValidCNPJ(cnpj) {
+/**
+ * Validates a Brazilian CNPJ (Cadastro Nacional da Pessoa Jurídica) tax identification number.
+ *
+ * @param {string} cnpj - The CNPJ to be validated.
+ * @returns {boolean} - True if the CNPJ is valid, false otherwise.
+ */
+export function isValidCNPJ(cnpj) {
+  /**
+   * Remove non-digit characters from the CNPJ.
+   * @type {string}
+   */
   const cleanCNPJ = cnpj.replace(/[^\d]+/g, '');
 
+  // Check if the cleaned CNPJ has the correct length
   if (cleanCNPJ.length !== 14) return false;
 
+  // Check for known invalid CNPJs with all digits being the same
   if (/^(\d)\1{13}$/.test(cleanCNPJ)) return false;
 
+  /**
+   * Convert the CNPJ digits to an array of numbers.
+   * @type {number[]}
+   */
   const digits = cleanCNPJ.split('').map(Number);
+
+  /**
+   * Calculate the first verification digit of the CNPJ.
+   *
+   * @param {number[]} arr - Array of digits for the calculation.
+   * @returns {number} - The calculated verification digit.
+   */
   const calcFirstDigit = (arr) => {
     let sum = 0;
     let weight = 5;
@@ -17,6 +40,12 @@ function isValidCNPJ(cnpj) {
     return remainder < 2 ? 0 : 11 - remainder;
   };
 
+  /**
+   * Calculate the second verification digit of the CNPJ.
+   *
+   * @param {number[]} arr - Array of digits for the calculation.
+   * @returns {number} - The calculated verification digit.
+   */
   const calcSecondDigit = (arr) => {
     let sum = 0;
     let weight = 6;
@@ -28,11 +57,22 @@ function isValidCNPJ(cnpj) {
     return remainder < 2 ? 0 : 11 - remainder;
   };
 
+  /**
+   * Calculate the first verification digit.
+   * @type {number}
+   */
   const firstDigit = calcFirstDigit(digits.slice(0, 12));
+
+  // Check if the calculated first digit matches the given first digit
   if (firstDigit !== digits[12]) return false;
 
+  /**
+   * Calculate the second verification digit.
+   * @type {number}
+   */
   const secondDigit = calcSecondDigit(digits.slice(0, 13));
+
+  // Check if the calculated second digit matches the given second digit
   return secondDigit === digits[13];
 }
 
-console.log(isValidCNPJ('08.987.585/0001-97'))
