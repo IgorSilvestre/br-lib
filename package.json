@@ -1,11 +1,26 @@
 {
   "name": "br-lib",
+  "version": "1.0.0",
+  "author": "Igor Silvestre",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/br-lib.git"
+  },
   "module": "index.js",
-  "type": "module",
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "jest": "^29.7.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/br-lib/issues"
+  },
+  "keywords": ["your-keywords", "MIT"],
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "module"
 }
