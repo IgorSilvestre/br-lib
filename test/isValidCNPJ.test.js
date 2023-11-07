@@ -1,4 +1,4 @@
-import { isValidCNPJ } from "../isValidCNPJ";
+import { isValidCNPJ } from "../functions/isValidCNPJ";
 
 describe('isValidCNPJ', () => {
   test('valid CNPJ should return true', () => {
