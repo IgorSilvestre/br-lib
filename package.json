@@ -8,11 +8,9 @@
   },
   "module": "index.js",
   "devDependencies": {
-    "bun-types": "latest",
     "jest": "^29.7.0"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
   },
   "bugs": {
     "url": "https://github.com/your-username/br-lib/issues"
