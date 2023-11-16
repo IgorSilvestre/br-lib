@@ -1,6 +1,6 @@
 {
   "name": "br-lib",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "author": "Igor Silvestre",
   "repository": {
     "type": "git",
@@ -10,8 +10,7 @@
   "devDependencies": {
     "jest": "^29.7.0"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "bugs": {
     "url": "https://github.com/your-username/br-lib/issues"
   },
@@ -20,5 +19,9 @@
   "scripts": {
     "test": "jest"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12"
+  }
 }

@@ -75,4 +75,3 @@ export function isValidCNPJ(cnpj) {
   // Check if the calculated second digit matches the given second digit
   return secondDigit === digits[13];
 }
-
