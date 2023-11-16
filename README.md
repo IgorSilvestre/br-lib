@@ -29,7 +29,8 @@ yarn
 ```
 
 
-**Test**
+\n
+**Testing**
 ```bash
 bun test
 ```
