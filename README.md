@@ -14,6 +14,7 @@ Adicione o repositório como dependencia em seu package.json
 ```
 
 **Install**
+
 Bun
 ```bash
 bun install
