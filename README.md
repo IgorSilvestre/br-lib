@@ -14,7 +14,6 @@ Adicione o repositório como dependencia em seu package.json
 ```
 
 **Install**
-
 Bun
 ```bash
 bun install
@@ -26,6 +25,11 @@ npm install
 Yarn:
 ```bash
 yarn
+```
+
+**Test**
+```bash
+bun test
 ```
 
 **If you want to use any function just import it to your project. There are no default imports so you'll need to import it as the same name:**
