@@ -12,8 +12,7 @@ Adicione o repositório como dependencia em seu package.json
 ```bash
 "br-lib": "https://github.com/IgorSilvestre/br-lib.git",
 ```
-––––––––––––––––
-**Install**
+–– **Install** ––
 
 Bun
 ```bash
@@ -29,8 +28,7 @@ yarn
 ```
 
 
-––––––––––––––––
-**Testing**
+–– **Testing** ––
 ```bash
 bun test
 ```
