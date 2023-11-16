@@ -15,8 +15,6 @@ Adicione o repositório como dependencia em seu package.json
 
 **Install**
 
-Instale
-
 Bun
 ```bash
 bun install
@@ -30,7 +28,9 @@ Yarn:
 yarn
 ```
 
-** If you want to use any function just import it to your project. I dont make any default imports so you'll need to import it as the same name:
+** If you want to use any function just import it to your project. There are no default imports so you'll need to import it as the same name:**
+
+Se você quiser usar alguma função, basta importá-la para o seu projeto. Eu não faço importações padrão, então você precisará importá-la com o mesmo nome
 ```javascript
 import { function } from 'br-lib'
 ```
