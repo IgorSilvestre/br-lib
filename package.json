@@ -2,6 +2,7 @@
   "name": "br-lib",
   "version": "1.3.1",
   "author": "Igor Silvestre",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/your-username/br-lib.git"
