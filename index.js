@@ -4,7 +4,7 @@ import { scrapeWebsiteForContacts } from "./functions/scrapeWebsiteForContacts"
 import { parseISODateToBrazilSTD } from "./functions/parseISODateToBrazilSTD"
 import { regexForSearch } from "./functions/regexForSearch"
 
-export default {
+export {
   isValidCNPJ,
   insistFetch,
   scrapeWebsiteForContacts,
