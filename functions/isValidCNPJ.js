@@ -5,6 +5,7 @@
  * @returns {boolean} - True if the CNPJ is valid, false otherwise.
  */
 export function isValidCNPJ(cnpj) {
+  if (!cnpj || typeof cnpj !== 'string') return false;
   /**
    * Remove non-digit characters from the CNPJ.
    * @type {string}
