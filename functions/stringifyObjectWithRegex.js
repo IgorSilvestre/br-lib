@@ -4,7 +4,7 @@
  * @param {Object} obj - The object to be converted to a JSON string.
  * @returns {string} - The JSON string representation of the object, with regular expressions converted to strings.
  */
-export function stringifyWithRegex(obj) {
+export function stringifyObjectWithRegex(obj) {
   function replacer(key, value) {
       if (value instanceof RegExp) {
           // Convert RegExp to a string
