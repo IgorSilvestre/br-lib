@@ -17,7 +17,9 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
  */
 export async function insistFetch(url, retries = 3, delayMs = 1000) {
     try {
-      return await axios.get(url, { timeout: 10000 }); // 10 seconds timeout
+      return await axios.get(url, { timeout: 10000, headers: {
+        'Accept-Encoding': 'gzip, deflate'
+      } }); // 10 seconds timeout
     } catch (error) {
       if (retries === 0) throw error;
       console.log(`Retrying ${url} (${retries} retries left)`);
