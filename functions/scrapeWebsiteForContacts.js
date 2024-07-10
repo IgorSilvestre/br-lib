@@ -75,5 +75,6 @@ async function scrapeWebsiteForContacts (rootUrl) {
     emails: [...new Set(allEmails)]
   }
 }
-scrapeWebsiteForContacts('https://www.italiany.com.br/').then(console.log).catch(console.error);
+
 export { scrapeWebsiteForContacts };
+
