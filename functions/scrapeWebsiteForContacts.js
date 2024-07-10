@@ -25,7 +25,7 @@ async function scrapeWebsite(urlToScrape, domain, visitedUrls, allPhoneNumbers, 
 
       // Extract phone numbers and emails from the current page
       const phoneRegex = new RegExp(/(?:\+\d{2}\s?)?\(?\d{2}\)?\s?\d?\s?\d{4}-\d{4}/g);
-      const emailRegex = /\b[\w\.-]+@[\w\.-]+\.\w+\b/g;
+      const emailRegex = /\b[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}\b/g;
 
       const phoneNumbersOnPage = $('body').text().match(phoneRegex);
       const emailsOnPage = $('body').text().match(emailRegex);
@@ -72,8 +72,8 @@ async function scrapeWebsiteForContacts (rootUrl) {
 
   return {
     phoneNumbers: Array.from(new Set(allPhoneNumbers)),
-    emails: allEmails
+    emails: [...new Set(allEmails)]
   }
 }
-
+scrapeWebsiteForContacts('https://www.italiany.com.br/').then(console.log).catch(console.error);
 export { scrapeWebsiteForContacts };
