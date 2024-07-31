@@ -24,7 +24,7 @@ async function scrapeWebsite(urlToScrape, domain, visitedUrls, allPhoneNumbers, 
       const $ = cheerio.load(html);
 
       // Extract phone numbers and emails from the current page
-      const phoneRegex = new RegExp(/(?:\+\d{2}\s?)?\(?\d{2}\)?\s?\d?\s?\d{4}-\d{4}/g);
+      const phoneRegex = new RegExp(/(?:\+\d{2}\s?)?\(?\d{2}\)?\s?\d?\s?\d{4}[-.]\d{4}|\d{4}[-.]\d{4}/g);
       const emailRegex = /\b[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}\b/g;
 
       const phoneNumbersOnPage = $('body').text().match(phoneRegex);
