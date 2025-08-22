@@ -18,14 +18,6 @@ Bun
 ```bash
 bun install
 ```
-NPM:
-```bash
-npm install
-```
-Yarn:
-```bash
-yarn
-```
 
 
 –– **Testing** ––
